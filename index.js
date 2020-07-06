@@ -7,13 +7,13 @@ function map(arr, callFn) {
     return newArr
 }
 
-function reduce(arr, callFn) {
-    let total = 0
-    for (let i = 0; i < arr.lenght; i++) {
-        total = callFn(arr[i], total) 
-    }
-    return total
-}
+// function reduce(arr, callFn) {
+//     let total = 0
+//     for (let i = 0; i < arr.lenght; i++) {
+//         total = callFn(arr[i], total) 
+//     }
+//     return total
+// }
 
 function reduce (arr, callFn, sp) {
     let total 
