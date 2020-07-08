@@ -3,23 +3,23 @@
 //  return sourceArray.map(x => +- x);
 //};
 
-function map(src, cb) {
+function map(sourceArray, block) {
   let r = []
 
-  for (let i = 0; i < src.length; i++) {
-    let theElement = src[i]
-    r.push(cb(theElement))
+  for (let i = 0; i < sourceArray.length; i++) {
+    let theElement = sourceArray[i]
+    r.push(block(theElement))
   }
 
   return r;
 }
 
-function reduce(src, cb, starting){
-  let r = (!!starting) ? starting : src[0]
+function reduce(sourceArray, block, starting){
+  let r = (!!starting) ? starting : sourceArray[0]
   let i = (!!starting) ? 0 : 1
 
-  for (; i < src.length; i++) {
-    r = cb(src[i], r)
+  for (; i < sourceArray.length; i++) {
+    r = block(sourceArray[i], r)
   }
 
   return r;
